@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="firstBean" name="firstBean" class="com.as.spring.beans.FirstBean" />
+
+    <bean id="secondBean" name="secondBean" class="com.as.spring.beans.SecondBean">
+        <property name="firstBean" ref="firstBean"/>
+    </bean>
+
+    <bean class="com.as.spring.beans.FirstBeanTest">
+        <property name="firstBean" ref="firstBean"/>
+        <property name="secondBean" ref="secondBean"/>
+    </bean>
+</beans>
