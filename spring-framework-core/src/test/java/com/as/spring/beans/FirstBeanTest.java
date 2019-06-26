@@ -15,20 +15,11 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @ContextConfiguration({"classpath:application-test.xml"})
 public class FirstBeanTest {
 
-    public FirstBeanTest() {
-    }
-
+    @Autowired
     private FirstBean firstBean;
 
-    public void setFirstBean(FirstBean firstBean) {
-        this.firstBean = firstBean;
-    }
-
+    @Autowired
     private SecondBean secondBean;
-
-    public void setSecondBean(SecondBean secondBean) {
-        this.secondBean = secondBean;
-    }
 
     @Test
     public void getFirstBeanInfoTest() {
@@ -39,4 +30,5 @@ public class FirstBeanTest {
     public void getSecondBeanInfoTest() {
         secondBean.getBeanInfo();
     }
+
 }

@@ -9,8 +9,5 @@
         <property name="firstBean" ref="firstBean"/>
     </bean>
 
-    <bean class="com.as.spring.beans.FirstBeanTest">
-        <property name="firstBean" ref="firstBean"/>
-        <property name="secondBean" ref="secondBean"/>
-    </bean>
+    <bean class="com.as.spring.beans.InstantiationTracingBeanPostProcessor"/>
 </beans>
